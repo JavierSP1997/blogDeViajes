@@ -3,14 +3,14 @@
     font-family: var(--secondary-font);
     background-color: var(--primary-color);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     height: 50px;
-    padding-top: 10px;
+    padding-top: 8px;
 }
 
 .bottom {
     font-family: var(--primary-font);
-    background-color: beige;
+    background-color: rgb(224, 224, 201);
     height: 50px;
 }
 
@@ -32,4 +32,14 @@ li:hover {
     padding-bottom: 5px;
     transition: 0.5s;
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .bottom ul li {
+        font-size: 0;
+    }
+
+    .bottom ul li i {
+        font-size: 24px;
+    }
 }
