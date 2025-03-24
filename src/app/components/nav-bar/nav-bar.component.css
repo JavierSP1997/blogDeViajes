@@ -1,0 +1,35 @@
+.top {
+    text-align: center;
+    font-family: var(--secondary-font);
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.bottom {
+    font-family: var(--primary-font);
+    background-color: beige;
+    height: 50px;
+}
+
+ul {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+li {
+    text-align: center;
+    transition: 0.5s;
+    ;
+}
+
+li:hover {
+    color: green;
+    padding-bottom: 5px;
+    transition: 0.5s;
+    transform: scale(1.1);
+}
