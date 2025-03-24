@@ -4,15 +4,16 @@
         <p>Bienvenidos a nuestro blog de viajes. Aquí podrás descubrir mis aventuras y compartir tus propios viajes.
             Únete a
             nuestra comunidad y celebra la magia de conocer el mundo. ¡Comparte tu historia!</p>
-        <button>Comparte tu aventura</button>
+        <button [routerLink]="['/new']">Comparte tu aventura</button>
     </div>
 </section>
-<section class="galeria">
+<section class="galeria container">
     <h2>Mis aventuras:</h2>
     <div class="grid">
         @for (publicacion of publicaciones; track $index) {
         <article>
             <img src="{{publicacion.imagen}}" alt="">
+            <a>Ver detalle</a>
             <h3>{{publicacion.titulo}}</h3>
         </article>
         }
