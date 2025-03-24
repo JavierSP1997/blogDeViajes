@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PublicacionesService } from '../../services/publicaciones.service';
 
 @Component({
   selector: 'app-home',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  publicaciones: any[] = [];
+
+  publicacionesService = inject(PublicacionesService)
+
+  ngOnInit(): void {
+    this.publicaciones = this.publicacionesService.getPublicaciones();
+  }
 }

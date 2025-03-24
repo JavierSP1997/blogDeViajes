@@ -10,37 +10,11 @@
 <section class="galeria">
     <h2>Mis aventuras:</h2>
     <div class="grid">
-        <article class="post">
-            <img src="ruta/a/tu/imagen.jpg" alt="Descripción de la imagen">
-            <h3>Título del Artículo</h3>
+        @for (publicacion of publicaciones; track $index) {
+        <article>
+            <img src="{{publicacion.imagen}}" alt="">
+            <h3>{{publicacion.titulo}}</h3>
         </article>
-        <article class="post">
-            <img src="ruta/a/tu/imagen.jpg" alt="Descripción de la imagen">
-            <h3>Título del Artículo</h3>
-        </article>
-        <article class="post">
-            <img src="ruta/a/tu/imagen.jpg" alt="Descripción de la imagen">
-            <h3>Título del Artículo</h3>
-        </article>
-        <article class="post">
-            <img src="ruta/a/tu/imagen.jpg" alt="Descripción de la imagen">
-            <h3>Título del Artículo</h3>
-        </article>
-        <article class="post">
-            <img src="ruta/a/tu/imagen.jpg" alt="Descripción de la imagen">
-            <h3>Título del Artículo</h3>
-        </article>
-        <article class="post">
-            <img src="ruta/a/tu/imagen.jpg" alt="Descripción de la imagen">
-            <h3>Título del Artículo</h3>
-        </article>
-        <article class="post">
-            <img src="ruta/a/tu/imagen.jpg" alt="Descripción de la imagen">
-            <h3>Título del Artículo</h3>
-        </article>
-        <article class="post">
-            <img src="ruta/a/tu/imagen.jpg" alt="Descripción de la imagen">
-            <h3>Título del Artículo</h3>
-        </article>
+        }
     </div>
 </section>
