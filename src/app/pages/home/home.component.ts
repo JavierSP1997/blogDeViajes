@@ -12,9 +12,19 @@ export class HomeComponent {
 
   publicaciones: any[] = [];
 
+
   publicacionesService = inject(PublicacionesService)
 
   ngOnInit(): void {
     this.publicaciones = this.publicacionesService.getPublicaciones();
   }
+
+  onCategoriaSeleccionada($event: any) {
+    if ($event.target.value === 'Todas') {
+      this.publicaciones = this.publicacionesService.getPublicaciones()
+    } else {
+      this.publicaciones = this.publicacionesService.getByCategory($event.target.value)
+    }
+  }
 }
+

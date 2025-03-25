@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Categoria } from '../interfaces/categoria.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -121,12 +122,10 @@ export class PublicacionesService {
   getPublicaciones() {
     return this.publicaciones
   }
-  getPublicacionPorId(id: number) {
-    return this.publicaciones.find(p => p.id === id);
-  }
 
-  filtrarPorCategoria(categoria: string) {
-    return this.publicaciones.filter(publicacion => publicacion.categoria.toLowerCase() === categoria.toLowerCase());
+  getByCategory(categoria: string) {
+    return this.publicaciones.filter(publicacion => publicacion.categoria === categoria)
   }
 }
+
 
