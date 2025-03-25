@@ -8,17 +8,19 @@
     </div>
 </section>
 <section class="galeria container">
-    <h2>Mis aventuras:</h2>
-    <div>
-        <label for="categoria">Selecciona una categoría:</label>
-        <select id="categoria" (change)="onCategoriaSeleccionada($event)">
-            <option value="Todas">Todas</option>
-            <option value="Aventura">Aventura</option>
-            <option value="Playas">Playas</option>
-            <option value="Cultura">Cultura</option>
-            <option value="Naturaleza">Naturaleza</option>
-            <option value="Gastronomía">Gastronomía</option>
-        </select>
+    <div class="selector">
+        <h2>Mis aventuras:</h2>
+        <div>
+            <label for="categoria">Selecciona una categoría:</label>
+            <select id="categoria" (change)="onCategoriaSeleccionada($event)">
+                <option value="Todas">Todas</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Playas">Playas</option>
+                <option value="Cultura">Cultura</option>
+                <option value="Naturaleza">Naturaleza</option>
+                <option value="Gastronomía">Gastronomía</option>
+            </select>
+        </div>
     </div>
     <div class="grid">
         @for (publicacion of publicaciones; track $index) {

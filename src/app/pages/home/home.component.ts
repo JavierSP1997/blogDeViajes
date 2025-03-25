@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { PublicacionesService } from '../../services/publicaciones.service';
 import { RouterLink } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   imports: [RouterLink],
