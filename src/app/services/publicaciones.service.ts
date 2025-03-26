@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Categoria } from '../interfaces/categoria.interface';
+import { Post } from '../interfaces/post.interface';
+import { __param } from 'tslib';
 
 @Injectable({
   providedIn: 'root'
@@ -125,6 +127,12 @@ export class PublicacionesService {
 
   getByCategory(categoria: string) {
     return this.publicaciones.filter(publicacion => publicacion.categoria === categoria)
+  }
+
+
+
+  getById(id: number): Post | undefined {
+    return this.publicaciones.find(publicacion => publicacion.id === id)
   }
 }
 

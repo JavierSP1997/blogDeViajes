@@ -23,14 +23,8 @@ export class NewComponent {
       categoria: new FormControl('', Validators.required)
     });
   }
+  onSubmit() { }
 
-  onSubmit() {
-    if (this.form.valid) {
-      console.log('Publicación añadida', this.form.value);
-    } else {
-      console.log('Publicación no valida');
-    }
-  }
   checkError(field: string, validator: string): boolean | undefined {
     return this.form.get(field)?.hasError(validator) && this.form.get(field)?.touched;
   }

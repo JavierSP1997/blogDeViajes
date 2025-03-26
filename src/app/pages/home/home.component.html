@@ -26,7 +26,7 @@
         @for (publicacion of publicaciones; track $index) {
         <article>
             <img src="{{publicacion.imagen}}" alt="">
-            <a>Ver detalle</a>
+            <a [routerLink]="['/detalle', publicacion.id]">Ver detalle</a>
             <h3>{{publicacion.titulo}}</h3>
         </article>
         }

@@ -142,3 +142,7 @@ div select:hover {
     background-color: var(--primary-color);
     color: white;
 }
+
+a {
+    text-decoration: none;
+}
