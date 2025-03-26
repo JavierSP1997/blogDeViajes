@@ -1,23 +1,21 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { PublicacionesService } from '../../services/publicaciones.service';
-import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-detalle',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './detalle.component.html',
   styleUrl: './detalle.component.css'
 })
 export class DetalleComponent {
 
-  router = inject(Router)
-
+  @Input() id: string | undefined
   publicacionesService = inject(PublicacionesService)
 
+
   get publicacion() {
-    let routerUrl = this.router.url
-    let caca = routerUrl.split("/")
-    let id = Number(caca[caca.length - 1])
-    return this.publicacionesService.getById(id)
+    return this.publicacionesService.getById(Number(this.id));
   }
 }

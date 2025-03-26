@@ -1,1 +1,6 @@
-<p>{{publicacion?.categoria}}</p>
+<section class="detalle">
+    <h2>{{publicacion?.titulo}}</h2>
+    <img src="{{publicacion?.imagen}}" alt="">
+    <p>{{publicacion?.texto}}</p>
+    <p>{{publicacion?.fecha | date: 'dd/MM/yyyy'}}</p>
+</section>
