@@ -17,18 +17,18 @@
             <div class="mb-4">
                 <label class="form-label">Imagen del blog:</label>
                 <input type="text" class="form-control" formControlName="imagen">
-                @if (checkError('imagen', 'required')) {
+                @if (checkError('imagen', 'required') || checkError('imagen', 'pattern')) {
                 <p class="error">El campo imagen es requerido y debe ser una URL</p>}
             </div>
             <div class="mb-4">
                 <label class="form-label text-light">Categoria del blog:</label>
                 <select class="form-control" formControlName="categoria">
                     <option value="">Selecciona una opción:</option>
-                    <option value="playa">Playa</option>
-                    <option value="montaña">Montaña</option>
-                    <option value="ciudad">Ciudad</option>
-                    <option value="rural">Rural</option>
-                    <option value="festivales">Festivales</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Playas">Playas</option>
+                    <option value="Cultura">Cultura</option>
+                    <option value="Naturaleza">Naturaleza</option>
+                    <option value="Gastronomia">Gastronomía</option>
                 </select>
                 @if (checkError('categoria', 'required')) {
                 <p class="error">El campo categoria es requerido</p>}

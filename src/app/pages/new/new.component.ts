@@ -18,7 +18,7 @@ export class NewComponent {
       titulo: new FormControl('', [Validators.required, Validators.minLength(3)]),
       texto: new FormControl('', [Validators.required, Validators.maxLength(500), Validators.minLength(140)]),
       autor: new FormControl('', Validators.required),
-      imagen: new FormControl('', Validators.required),
+      imagen: new FormControl('', [Validators.required, Validators.pattern(/^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i)]),
       fecha: new FormControl(null, Validators.required),
       categoria: new FormControl('', Validators.required)
     });
