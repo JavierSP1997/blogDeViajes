@@ -118,7 +118,6 @@ export class PublicacionesService {
     }
   ]
 
-
   constructor() { }
 
   getPublicaciones() {
@@ -129,11 +128,11 @@ export class PublicacionesService {
     return this.publicaciones.filter(publicacion => publicacion.categoria === categoria)
   }
 
-
-
   getById(id: number): Post | undefined {
     return this.publicaciones.find(publicacion => publicacion.id === id)
   }
+
+
 }
 
 
