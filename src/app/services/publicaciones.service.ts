@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Categoria } from '../interfaces/categoria.interface';
 import { Post } from '../interfaces/post.interface';
 import { __param } from 'tslib';
 
@@ -77,13 +76,13 @@ export class PublicacionesService {
       titulo: "Explorando las Islas Griegas: Sol, Mar y Cultura",
       texto: "Las Islas Griegas, un archipiélago lleno de historia, cultura y belleza natural, ofrecen una mezcla perfecta para todos los gustos. Desde las playas de arena dorada hasta los pueblos blancos con sus tejados azules, cada isla tiene su propio encanto. Santorini, Mykonos y Creta son solo algunas de las islas que atraen a viajeros de todo el mundo con su cálido clima, sus monumentos históricos y su vibrante vida nocturna. Un recorrido por estas islas es un deleite para los sentidos, un viaje que combina el sol, el mar y la rica herencia de la antigua Grecia.",
       autor: "Javier Sancho",
-      imagen: "https://www.civitatis.com/blog/wp-content/uploads/2021/05/islas-griegas-mas-bonitas.jpg",
+      imagen: "https://crs.allyz.com/v1/static/allyz-com/es/media/home/guide-de-voyage/recomendaciones-de-viaje/cuales-son-las-mejores-islas-griegas-para-ir-de-vacaciones/header.jpg",
       fecha: new Date('2025-03-05'),
       categoria: "Playas"
     },
     {
       id: 9,
-      titulo: "Safari en el Serengeti: Un Encuentro Cercano con la Fauna",
+      titulo: "Safari en el Serengeti: Un Encuentro  la Fauna",
       texto: "El Serengeti, en Tanzania, es uno de los parques nacionales más emblemáticos del mundo, famoso por su vasta llanura y por albergar una increíble biodiversidad. Durante un safari en este lugar, los viajeros tienen la oportunidad de observar animales salvajes en su hábitat natural, desde leones y elefantes hasta guepardos y jirafas. La experiencia es única, sobre todo durante la Gran Migración, cuando millones de ñus y cebras cruzan las llanuras en busca de pastos frescos, creando un espectáculo de la naturaleza que no se olvida.",
       autor: "Javier Sancho",
       imagen: "https://cdn.rhinoafrica.com/tmp/image-thumbnails/media/_en/destinations/root/africa/east-africa/tanzania/serengeti-and-the-north-of-tanzania/greater-serengeti-ecosystem/serengeti-national-park/_img/gallery/image-thumb__53383__background-cover/field-with-zebras-and-blue-wildebeest_192248950.jpg",

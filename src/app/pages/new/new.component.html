@@ -1,26 +1,32 @@
 <section class="container">
     <div class="formulario mb-5">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <div class="mb-4">
+            <div class="mb-1">
                 <label class="form-label">Título de la publicación:</label>
                 <input type="text" class="form-control" formControlName="titulo">
-                @if (checkError('titulo', 'required')) {
-                <p class="error">El campo título es requerido</p>
-                }
+                <div class="error">
+                    @if (checkError('titulo', 'required')) {
+                    <p class="error">El campo título es requerido</p>
+                    }
+                </div>
             </div>
-            <div class="mb-4">
+            <div class="mb-1">
                 <label class="form-label">Texto de la publicación:</label>
                 <textarea class="form-control" formControlName="texto"></textarea>
-                @if (checkError('texto', 'required') || checkError('texto', 'minlength')) {
-                <p class="error">El campo texto es requerido y tiene un mínimo de 140 carácteres</p>}
+                <div class="error">
+                    @if (checkError('texto', 'required') || checkError('texto', 'minlength')) {
+                    <p class="error">El campo texto es requerido y tiene un mínimo de 140 carácteres</p>}
+                </div>
             </div>
-            <div class="mb-4">
+            <div class="mb-1">
                 <label class="form-label">Imagen del blog:</label>
                 <input type="text" class="form-control" formControlName="imagen">
-                @if (checkError('imagen', 'required') || checkError('imagen', 'pattern')) {
-                <p class="error">El campo imagen es requerido y debe ser una URL</p>}
+                <div class="error">
+                    @if (checkError('imagen', 'required') || checkError('imagen', 'minlength')) {
+                    <p class="error">El campo imagen es requerido y debe ser una URL</p>}
+                </div>
             </div>
-            <div class="mb-4">
+            <div class="mb-1">
                 <label class="form-label text-light">Categoria del blog:</label>
                 <select class="form-control" formControlName="categoria">
                     <option value="">Selecciona una opción:</option>
@@ -30,22 +36,27 @@
                     <option value="Naturaleza">Naturaleza</option>
                     <option value="Gastronomia">Gastronomía</option>
                 </select>
-                @if (checkError('categoria', 'required')) {
-                <p class="error">El campo categoria es requerido</p>}
+                <div class="error">
+                    @if (checkError('categoria', 'required')) {
+                    <p class="error">El campo categoria es requerido</p>}
+                </div>
             </div>
-            <div class="mb-4">
+            <div class="mb-1">
                 <label class="form-label text-light">Autor:</label>
                 <input type="text" class="form-control" formControlName="autor">
-                @if (checkError('autor', 'required')) {
-                <p class="error">El campo autor es requerido</p>}
+                <div class="error">
+                    @if (checkError('autor', 'required')) {
+                    <p class="error">El campo autor es requerido</p>}
+                </div>
             </div>
-            <div class="mb-4">
+            <div class="mb-1">
                 <label class="form-label text-light">Fecha de publicación:</label>
                 <input type="date" class="form-control" formControlName="fecha">
-                @if (checkError('fecha', 'required')) {
-                <p class="error">El campo fecha es requerido</p>}
+                <div class="error">
+                    @if (checkError('fecha', 'required')) {
+                    <p class="error">El campo fecha es requerido</p>}
+                </div>
             </div>
-
             <div class="text-center">
                 <input type="submit" value="Envia tu publicación" class="boton">
             </div>

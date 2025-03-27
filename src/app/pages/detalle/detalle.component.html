@@ -1,8 +1,10 @@
 <section class="detalle">
     <div class="container">
         <h2>{{publicacion?.titulo}}</h2>
-        <img src="{{publicacion?.imagen}}" alt="">
-        <p>{{publicacion?.texto}}</p>
+        <div class="versionDesktop">
+            <img src="{{publicacion?.imagen}}" alt="">
+            <p>{{publicacion?.texto}}</p>
+        </div>
         <div class="flex">
             <p><span>Autor: </span>{{publicacion?.autor}}</p>
             <p><span>Fecha publicación: </span>{{publicacion?.fecha | date: 'dd/MM/yyyy'}}</p>
