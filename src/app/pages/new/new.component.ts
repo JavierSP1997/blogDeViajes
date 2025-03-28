@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, Validators } from '@angular/forms';
-import { PublicacionesService } from '../../services/publicaciones.service';
 import { Router } from '@angular/router';
 import { NuevasPublisService } from '../../services/nuevas-publis.service';
 

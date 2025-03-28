@@ -1,13 +1,16 @@
+@if (publicacion) {
 <section class="detalle">
     <div class="container">
-        <h2>{{publicacion?.titulo}}</h2>
+        <h2>{{publicacion.titulo}}</h2>
         <div class="versionDesktop">
-            <img src="{{publicacion?.imagen}}" alt="">
-            <p>{{publicacion?.texto}}</p>
+            <img src="{{publicacion.imagen}}" alt="">
+            <p>{{publicacion.texto}}</p>
         </div>
         <div class="flex">
-            <p><span>Autor: </span>{{publicacion?.autor}}</p>
-            <p><span>Fecha publicación: </span>{{publicacion?.fecha | date: 'dd/MM/yyyy'}}</p>
+            <p><span>Autor: </span>{{publicacion.autor}}</p>
+            <p><span>Fecha publicación: </span>{{publicacion.fecha | date: 'dd/MM/yyyy'}}</p>
         </div>
     </div>
-</section>
+</section>}@else{
+<p>{{getpostPublicacion()?.autor}}</p>
+}
