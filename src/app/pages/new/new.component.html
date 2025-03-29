@@ -14,8 +14,9 @@
                 <label class="form-label">Texto de la publicación:</label>
                 <textarea class="form-control" formControlName="texto"></textarea>
                 <div class="error">
-                    @if (checkError('texto', 'required') || checkError('texto', 'minlength')) {
-                    <p class="error">El campo texto es requerido y tiene un mínimo de 140 carácteres</p>}
+                    @if (checkError('texto', 'required') || checkError('texto', 'minlength') || checkError('texto',
+                    'maxlenght')){
+                    <p class="error">El campo texto es requerido y tiene que tener entre 100 y 500 carácteres</p>}
                 </div>
             </div>
             <div class="mb-1">

@@ -1,4 +1,5 @@
-<section class="height">
+@if (nuevasPublicaciones.length>0) {
+<section class="height container">
     <div class="grid">
         @for (publicacion of nuevasPublicaciones; track $index) {
         <article>
@@ -8,4 +9,11 @@
         </article>
         }
     </div>
-</section>
+</section>}@else{
+<div class="noPublis container">
+    <div class="gif">
+        <img src="https://cdn-icons-png.flaticon.com/512/5857/5857300.png" alt="No publicaciones gif">
+    </div>
+    <h2>No hay publicaciones, ¿Por qué no eres el primero en compartir tu aventura?</h2>
+</div>
+}
