@@ -1,9 +1,11 @@
-<div class="grid">
-    @for (publicacion of nuevasPublicaciones; track $index) {
-    <article>
-        <img src="{{publicacion.imagen}}" alt="">
-        <a [routerLink]="['/detalle', publicacion.id]">Ver detalle</a>
-        <h3>{{publicacion.titulo}}</h3>
-    </article>
-    }
-</div>
+<section class="height">
+    <div class="grid">
+        @for (publicacion of nuevasPublicaciones; track $index) {
+        <article>
+            <img src="{{publicacion.imagen}}" alt="">
+            <a [routerLink]="['/detalle', publicacion.id]">Ver detalle</a>
+            <h3>{{publicacion.titulo}}</h3>
+        </article>
+        }
+    </div>
+</section>

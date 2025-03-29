@@ -1,5 +1,4 @@
 import { Component, inject, Input } from '@angular/core';
-import { PublicacionesService } from '../../services/publicaciones.service';
 import { NuevasPublisService } from '../../services/nuevas-publis.service';
 import { RouterLink } from '@angular/router';
 

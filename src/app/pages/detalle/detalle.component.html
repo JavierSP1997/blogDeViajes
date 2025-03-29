@@ -12,5 +12,17 @@
         </div>
     </div>
 </section>}@else{
-<p>{{getpostPublicacion()?.autor}}</p>
+<section class="detalle">
+    <div class="container">
+        <h2>{{getpostPublicacion()?.titulo}}</h2>
+        <div class="versionDesktop">
+            <img src="{{getpostPublicacion()?.imagen}}" alt="">
+            <p>{{getpostPublicacion()?.texto}}</p>
+        </div>
+        <div class="flex">
+            <p><span>Autor: </span>{{getpostPublicacion()?.autor}}</p>
+            <p><span>Fecha publicación: </span>{{getpostPublicacion()?.fecha | date: 'dd/MM/yyyy'}}</p>
+        </div>
+    </div>
+</section>
 }
